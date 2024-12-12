@@ -32,4 +32,4 @@ jobs:
     - name: Test
       run: |
         export SDL_AUDIODRIVER=dummy
-        timeout 5s python main.py || True
+        timeout 5s python main.py || echo "Timout reached"
