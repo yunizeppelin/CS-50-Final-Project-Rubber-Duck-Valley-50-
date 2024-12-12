@@ -3,10 +3,10 @@ This game is part of my CS50 final project and was developed by Jirapas Unison J
 ## Demo 2024
 [![Demo 2024](https://img.youtube.com/vi/oLU3aZ74Pig/0.jpg)](https://www.youtube.com/watch?v=oLU3aZ74Pig)
 ## Features
--Interactive gameplay using mouse clicks
--Fake 3D achieved through pre-rendering and transformation techniques
--Modifiable sprites
--Variations in game modes
+- Interactive gameplay using mouse clicks
+- Fake 3D achieved through pre-rendering and transformation techniques
+- Modifiable sprites
+- Variations in game modes
 ## Getting Started
 To get started with the raycaster engine, you will need to have a C compiler and the SDL2 library installed on your system.
 
