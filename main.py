@@ -68,16 +68,28 @@ crosshair_area = crosshair.get_rect()
 crosshair_area.topleft = (64, 64)
 
 # Initialize mixer
-pygame.mixer.init()
+try:
+    pygame.mixer.init()
+except: Exception as e:
+    print("skipping audio")
 
 # Load theme song
-pygame.mixer.music.load("duck50_theme.mp3")
+try:
+    pygame.mixer.music.load("duck50_theme.mp3")
+except: Exception as e:
+    print("skipping audio")
 
 # Play theme song
-pygame.mixer.music.play(loops=-1)
+try:
+    pygame.mixer.music.play(loops=-1)
+except: Exception as e:
+    print("skipping audio")
 
 # Load weapon sound
-fire = pygame.mixer.Sound("fire.mp3")
+try:
+    fire = pygame.mixer.Sound("fire.mp3")
+except: Exception as e:
+    print("skipping audio")
 
 # Load timer
 timer = Timer()
@@ -206,7 +218,10 @@ while not quit:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 # decrease ammo
                 if ammo.ammo > 0 and ammo.start == None:
-                    fire.play()
+                    try:
+                        fire.play()
+                    except: Exception as e:
+                        print("skipping audio")
                     ammo.ammo -= 1
                     if duck.click(mouseX, mouseY):
                         # Destroy duck
