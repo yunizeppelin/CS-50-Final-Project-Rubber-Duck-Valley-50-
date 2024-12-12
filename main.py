@@ -70,25 +70,25 @@ crosshair_area.topleft = (64, 64)
 # Initialize mixer
 try:
     pygame.mixer.init()
-except: Exception as e:
+except Exception as e:
     print("skipping audio")
 
 # Load theme song
 try:
     pygame.mixer.music.load("duck50_theme.mp3")
-except: Exception as e:
+except Exception as e:
     print("skipping audio")
 
 # Play theme song
 try:
     pygame.mixer.music.play(loops=-1)
-except: Exception as e:
+except Exception as e:
     print("skipping audio")
 
 # Load weapon sound
 try:
     fire = pygame.mixer.Sound("fire.mp3")
-except: Exception as e:
+except Exception as e:
     print("skipping audio")
 
 # Load timer
@@ -220,7 +220,7 @@ while not quit:
                 if ammo.ammo > 0 and ammo.start == None:
                     try:
                         fire.play()
-                    except: Exception as e:
+                    except Exception as e:
                         print("skipping audio")
                     ammo.ammo -= 1
                     if duck.click(mouseX, mouseY):
